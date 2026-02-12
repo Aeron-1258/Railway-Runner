@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nature Dash</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&display=swap" rel="stylesheet">
+  <script type="module" crossorigin src="/assets/index-DsKd478n.js"></script>
+  <link rel="stylesheet" crossorigin href="/assets/index-CHpnNOhy.css">
+</head>
+
+<body>
+  <div id="game-container">
+    <canvas id="game-canvas"></canvas>
+
+    <div id="ui-container">
+      <div id="score-container">
+        <div>Score: <span id="score">0</span></div>
+        <div>Shards: <span id="shards">0</span></div>
+      </div>
+
+      <div id="start-screen">
+        <h1>NATURE DASH</h1>
+        <p>Select Your Character</p>
+        <div id="character-selection">
+          <div class="char-opt selected" data-char="0" style="background: #4facfe;"></div>
+          <div class="char-opt" data-char="1" style="background: #ff4b2b;"></div>
+          <div class="char-opt" data-char="2" style="background: #76ff03;"></div>
+        </div>
+        <button id="start-button">START RUN</button>
+      </div>
+
+      <div id="end-screen" class="hidden">
+        <h1>Game Over</h1>
+        <p id="final-score">Final Score: 0</p>
+        <button id="restart-button">PLAY AGAIN</button>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

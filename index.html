@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nature Dash</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+  <div id="landing-page">
+    <div class="landing-content">
+      <h1 class="neon-title">RAILWAY RUNNER</h1>
+      <p class="tagline">SURF THE SUBWAY. DODGE THE TRAINS.</p>
+
+      <div class="features-grid">
+        <div class="feature-item">
+          <span class="feature-icon">🏃</span>
+          <h3>4 Unique Runners</h3>
+          <p>Street, Princess, Jumper, Tank</p>
+        </div>
+        <div class="feature-item">
+          <span class="feature-icon">🚀</span>
+          <h3>Epic Powerups</h3>
+          <p>Jetpack, Hoverboard, Magnet</p>
+        </div>
+        <div class="feature-item">
+          <span class="feature-icon">🌙</span>
+          <h3>Day & Night</h3>
+          <p>Dynamic Environment Cycle</p>
+        </div>
+      </div>
+
+      <button id="enter-game-btn">PLAY NOW</button>
+
+      <footer>
+        <p>&copy; 2026 Railway Runner Games</p>
+      </footer>
+    </div>
+  </div>
+
+  <div id="game-container" class="hidden">
+    <canvas id="game-canvas"></canvas>
+
+    <div id="ui-container">
+      <div id="hud-top">
+        <div class="hud-item" id="score-box">
+          <span class="icon">🏆</span>
+          <span id="score">0</span>
+        </div>
+        <div class="hud-item" id="coins-box">
+          <span class="icon">🪙</span>
+          <span id="shards">0</span>
+        </div>
+      </div>
+
+      <div id="start-screen">
+        <h1>RAILWAY RUNNER</h1>
+        <div class="menu-coin-box">
+          <span class="icon">🪙</span>
+          <span id="menu-coins-display">0</span>
+        </div>
+
+        <p>Select Your Runner</p>
+        <div id="character-selection">
+          <!-- Char 0: Standard (Unlocked) -->
+          <div class="char-card selected" data-char="0">
+            <div class="char-preview" style="background: #4facfe;"></div>
+            <div class="char-info">Runner</div>
+          </div>
+
+          <!-- Char 1: Magneto (50 Coins) -->
+          <div class="char-card locked" data-char="1" data-cost="50">
+            <div class="char-preview" style="background: #ff4b2b;"></div>
+            <div class="char-info">Magneto</div>
+            <div class="lock-overlay"><span class="icon">🔒</span> 50</div>
+          </div>
+
+          <!-- Char 2: Jumper (100 Coins) -->
+          <div class="char-card locked" data-char="2" data-cost="100">
+            <div class="char-preview" style="background: #76ff03;"></div>
+            <div class="char-info">Jumper</div>
+            <div class="lock-overlay"><span class="icon">🔒</span> 100</div>
+          </div>
+
+          <!-- Char 3: Tank (200 Coins) -->
+          <div class="char-card locked" data-char="3" data-cost="200">
+            <div class="char-preview" style="background: #2979ff;"></div>
+            <div class="char-info">Tank</div>
+            <div class="lock-overlay"><span class="icon">🔒</span> 200</div>
+          </div>
+        </div>
+
+        <button id="buy-button" class="hidden">UNLOCK</button>
+        <button id="start-button">START RUN</button>
+      </div>
+
+      <div id="end-screen" class="hidden">
+        <h1>CRASHED!</h1>
+        <p id="final-score">Score: 0</p>
+        <button id="restart-button">RUN AGAIN</button>
+      </div>
+    </div>
+  </div>
+  <script type="module" src="/src/main.ts"></script>
+</body>
+
+</html>
